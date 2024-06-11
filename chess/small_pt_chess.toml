@@ -1,0 +1,34 @@
+[compound_mesh_asset]
+chess.path = "chess/chess.glb"
+chess.format = "glb"
+chess.load_materials = true
+
+[[task]]
+type = "small_pt"
+compound_object = "compound_mesh_asset.chess"
+
+render_width = 1920
+render_height = 1080
+bounces = 8
+spp = 1024
+spp_prog_interval = 64
+
+camera.type = "perspective"
+camera.to_world.translation = [0.35903, 0.405088, 0.311043]
+camera.to_world.rotation.quat = [0.269162, 0.176827, 0.519813, 0.791251]
+# camera.to_world.translation = [-0.559535, 0.194557, 0.213088]
+# camera.to_world.rotation.quat = [0.428741, 0.334602, -0.5163, -0.661556]
+camera.up = [0.0, 0.0, 1.0]
+camera.hfov = 60
+camera.aspect = 1.777778
+
+pixel_filter.type = "blackman_harris"
+
+tone_mapper.type = "agx"
+tone_mapper.look = "none"
+# tone_mapper.type = "aces"
+
+sky.map = "chess/syferfontein_1d_clear_puresky_2k.hdr"
+sky.transform_y_up = false
+sky.to_world.rotation.euler = [0, 180, 0]
+sky.strength = 0.5
