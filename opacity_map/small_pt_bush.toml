@@ -1,0 +1,24 @@
+[compound_mesh_asset]
+bush.path = "opacity_map/bush.glb"
+bush.format = "glb"
+bush.load_materials = true
+
+[[task]]
+type = "small_pt"
+compound_object = "compound_mesh_asset.bush"
+
+render_width = 1024
+render_height = 1024
+bounces = 1
+spp = 64
+spp_prog_interval = 64
+
+camera.type = "perspective"
+camera.to_world.translation = [1.52758, -1.97054, 2.05117]
+camera.to_world.rotation.quat = [0.852081, 0.413987, 0.13996, 0.28807]
+
+camera.up = [0.0, 0.0, 1.0]
+camera.hfov = 25
+camera.aspect = 1
+
+sky.ambient = [1, 1, 1]
