@@ -4,6 +4,38 @@ transmission.format = "glb"
 transmission.load_materials = true
 
 [[task]]
+type = "gpu_small_pt"
+compound_object = "compound_mesh_asset.transmission"
+
+render_width = 1024
+render_height = 1024
+bounces = 12
+spp = 1024
+spp_prog_interval = 256
+
+camera.type = "perspective"
+camera.to_world.translation = [0.0, -20.0, 0.0]
+camera.to_world.rotation.quat = [0.707107, 0.707107, 0.0, 0.0]
+camera.up = [0.0, 0.0, 1.0]
+camera.hfov = 27
+camera.aspect = 1
+
+pixel_filter.type = "blackman_harris"
+
+tone_mapper.type = "agx"
+tone_mapper.look = "none"
+# tone_mapper.type = "aces"
+
+backdrop = [0.8, 0.8, 0.8]
+
+[[task.light]]
+type = "point"
+color = [1, 1, 1]
+power = 5000.0
+pos = [2.86159, -6.68949, 5.90386]
+
+
+[[task]]
 type = "small_pt"
 compound_object = "compound_mesh_asset.transmission"
 

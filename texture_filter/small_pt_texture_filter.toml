@@ -4,6 +4,26 @@ plane.format = "glb"
 plane.load_materials = true
 
 [[task]]
+type = "gpu_small_pt"
+compound_object = "compound_mesh_asset.plane"
+
+render_width = 1280
+render_height = 720
+bounces = 1
+spp = 1
+spp_prog_interval = 64
+
+camera.type = "perspective"
+camera.to_world.translation = [22.4884, 0.327034, 0.502268]
+camera.to_world.rotation.quat = [0.5, 0.5, 0.5, 0.5]
+
+camera.up = [0.0, 0.0, 1.0]
+camera.hfov = 39.5978
+camera.aspect = 1.777778
+
+sky.ambient = [1, 1, 1]
+
+[[task]]
 type = "small_pt"
 compound_object = "compound_mesh_asset.plane"
 
